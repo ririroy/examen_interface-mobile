@@ -1,0 +1,40 @@
+.container {
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+}
+
+.square {
+    background-color: orange;
+    height: 200px;
+    width: 200px;
+}
+
+.text--mobile, .text--tablette {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 500px;
+    }
+    .text--mobile {
+        display: block;
+    }
+    .text--desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768) and (max-width: 1024px) {
+    .text--mobile, .text--desktop {
+        display: none;
+    }
+    .text--tablette {
+        display: block;
+    }
+}
